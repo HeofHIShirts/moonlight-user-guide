@@ -105,7 +105,7 @@ It's helpful to know the local network address of the server, in case Moonlight 
 
 1. Click on the Start menu and run the command prompt (cmd.exe)
 
-2. Type ipconfig /all and press Enter/Return
+2. Type *ipconfig /all* and press Enter/Return
 
 3. A local network addresses usually takes the form of 192.168.x.yyy - this is the information needed in case the address needs to be directly identified to Moonlight.
 
@@ -113,21 +113,21 @@ It's helpful to know the local network address of the server, in case Moonlight 
 
 1. On Moonlight for Android, iOS, or PC, once the client is connected to the network, it will scan the network for computers that have the GeForce Experience software running. If it finds one (or more), it will displpay the name of the computer it finds. Tap on the server (Android/iOS) or choose the server from the available list and click on the "Pair" button (PC) to start the pairing process.
 
-On Moonlight Embedded or Moonlight PC, the pairing process can be initiated from the command line using the following command:
+	On Moonlight Embedded or Moonlight PC, the pairing process can be initiated from the command line using the following command:
 
-*moonlight -pair [the name or network IP address of the server]*
+	*moonlight -pair [the name or network IP address of the server]*
 
-If the server is at 192.168.0.100, the command will be: moonlight -pair 192.168.0.100
+	If the server is at 192.168.0.100, the command will be: moonlight -pair 192.168.0.100
 
 2. The client will display a PIN using a pop-up message. 
 
-On Android/iOS, the PIN disappears fairly quickly after appearing, so having something available to write the PIN down on will be handy.
+	On Android/iOS, the PIN disappears fairly quickly after appearing, so having something available to write the PIN down on will be handy.
 
 3. On the server, at the same time the PIN appears on the client, a message will pop up on the server asking for the PIN displayed on the client. Enter the PIN from step 2 into the server box and click OK (or press Enter)
 
 4. If the pairing process completes successfully, a message will appear indicating success. Once paired, a client and server do not need to pair again.
 
-If the pairing process was not successful, a message will appear indicating failure. If the pairing process fails, start back at step 1 and try again, generating a new PIN to enter.
+	If the pairing process was not successful, a message will appear indicating failure. If the pairing process fails, start back at step 1 and try again, generating a new PIN to enter.
 
 5. If there are other clients to pair, return to step 1 with the next client and repeat the pairing process.
 
@@ -179,7 +179,6 @@ Moonlight for Android and iOS use the touch screen as a way of controlling the m
 By default, GeForce Experience and GameStream will only stream over your local network. To stream over the Internet, specific ports must be opened to allow communication between computers, and Moonlight will have to be explicitly told what IP address to connect to, which will be a different address than one on your network. 
 
 1. On the router controlling the network that the server connects to, in the port forwarding section, open the following ports on the following protocols:
-
 * TCP:
 	* 35043
 	* 47984
@@ -194,7 +193,7 @@ By default, GeForce Experience and GameStream will only stream over your local n
 
 2. To find the external IP address of your server, when connected to your network, use a service like http://www.whatismyip.com to determine the IP address another computer uses to talk to you.
 
-* *Note:* Some Internet Service providers change the external IP address in use by any given subscriber on a regular basis. Since Moonlight needs to connect to the right IP address, this change can cause problems for Moonlight. Using a dynamic DNS service like No-IP will give Moonlight a consistent name to use for connecting, even if the IP address that's associated with that name changes a lot. 
+	* *Note:* Some Internet Service providers change the external IP address in use by any given subscriber on a regular basis. Since Moonlight needs to connect to the right IP address, this change can cause problems for Moonlight. Using a dynamic DNS service like No-IP will give Moonlight a consistent name to use for connecting, even if the IP address that's associated with that name changes a lot. 
 
 3. Type the external IP address or name into the IP bar (PC), command line (PC / Embedded) or, on Android or iOS, tap on the plus key when you see all the possible servers to connect to, and a dialog will pop up to enter in an IP address or name, and then connect as normal to your server. Enjoy streaming over the Internet!
 
