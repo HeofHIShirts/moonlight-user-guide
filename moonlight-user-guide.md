@@ -1,6 +1,6 @@
 ## 1. Introduction
 
-*Moonlight* (formerly known as Limelight) is an open source implementation of nVidia's GameStream protocol, a protocol developed and used by the NVIDIA Shield family of products. GameStream allows a computer with a video card compatible with the GeForce Experience program to stream games to SHIELD devices, providing video and a controller to play games remotely.
+**Moonlight** (formerly known as Limelight) is an open source implementation of nVidia's GameStream protocol, a protocol developed and used by the NVIDIA Shield family of products. GameStream allows a computer with a video card compatible with the GeForce Experience program to stream games to SHIELD devices, providing video and a controller to play games remotely.
 
 With Moonlight, you can use this same protocol to stream a collection of games from a GameStream-compatible PC to any supported device, not just the SHIELD family, and play them remotely. Moonlight is perfect for gameplay on the go without sacrificing the graphics quality of a gaming computer. Moonlight also makes it possible to play PC-exclusive games on mobile devices, freeing anyone from the need to sit at the gaming computer to play.
 
@@ -10,7 +10,7 @@ With Moonlight, you can use this same protocol to stream a collection of games f
 
 For the computer that will be serving up the games (the server), the key component is having an nVidia graphics card that the GeForce Experience can use.
 
-Practically, this means that the video card (GPU) needs to be from either the *GTX series* (600, 700, 900) or a *700M, 800M, or 900M series* GPU. (Some 600M series can manage it, but to be safe, it's better just to go with the 700 or higher series) You can find a reasonable GTX card for about $125, minus any rebates you might get from the manufacturers or who you buy the GPU from.  
+Practically, this means that the video card (GPU) needs to be from either the **GTX series (600, 700, 900)** or a **700M, 800M, or 900M series** GPU. (Some 600M series can manage it, but to be safe, it's better just to go with the 700 or higher series) You can find a reasonable GTX card for about $125, minus any rebates you might get from the manufacturers or who you buy the GPU from.  
 
 In addition to that, nVidia suggests the following: (http://www.geforce.com/geforce-experience/system-requirements)
 
@@ -26,7 +26,7 @@ In addition to that, nVidia suggests the following: (http://www.geforce.com/gefo
 
 * A connection to the Internet to download the software.
 
-If your computer meets these requirements, you're good to go.
+If your server computer meets these requirements, you're good to go.
 
 ### Client Requirements
 
@@ -52,9 +52,9 @@ For wireless clients, devices must be able to connect with the Wireless-N (802.1
 
 ### For everyone
 
-On the server, download the GeForce Experience software from http://www.geforce.com/geforce-experience/download and install it. You may have to reboot the computer after installation to finish the setup.
+On the server, download the GeForce Experience software from http://www.geforce.com/geforce-experience/download and install it. The server may need a reboot after installation to finish setup.
 
-Start up GeForce Experience on the server and navigate to the "Preferences" tab. Then choose the "SHIELD" option. Of the options in "Stream games from [servername] to SHIELD devices", choose either "On my network" or "On my network and the Internet". To set up streaming from the Internet, see the appropriate place in "Optional Cool Things" later on in the guide.
+Start up GeForce Experience on the server and navigate to the **Preferences** tab. Then choose the **SHIELD** option. Of the options in **Stream games from [servername] to SHIELD devices**, choose either **On my network** or **On my network and the Internet**. To set up streaming from the Internet, see the appropriate place in the Optional Cool Things section later on in the guide.
 
 After this, follow the instructions appropriate for the platform you downloaded and installed Moonlight to. 
 
@@ -68,7 +68,7 @@ If the device doesn't have access to the app store, the release packages are ava
 
 1. For embedded computers that are running Raspbian (Raspberry Pi) or Arch Linux ARM (Raspberry Pi and others), pre-built packages or an installation script are available.
 
-	a. For Raspbian and OSMC: Add a line to your /etc/apt/sources.list
+	* For Raspbian and OSMC: Add a line to your /etc/apt/sources.list
 
 	*deb http://archive.itimmer.nl/raspbian/moonlight [wheezy/jessie] main*
 
@@ -79,7 +79,7 @@ If the device doesn't have access to the app store, the release packages are ava
 
 	Once installed, new versions will be installed during normal system upgrades.
 
-	b. For Arch Linux ARM: Use a user repository tool to install moonlight-embedded from the Arch User Repository (AUR). Afterward, new versions will be installed by running
+	* For Arch Linux ARM: Use a user repository tool to install moonlight-embedded from the Arch User Repository (AUR). Afterward, new versions will be installed by running
 	
 	*sudo pacman -Syu*
 
@@ -91,7 +91,7 @@ If the device doesn't have access to the app store, the release packages are ava
 
 2. PC beta clients are available for download from https://github.com/moonlight-stream/moonlight-pc/releases - get the version that matches the architecture of the JRE (32- or 64-bit) and is for the correct operating system.
 
-3. Start Moonlight with the command java -jar [name of the client downloaded].jar
+3. Start Moonlight with the command: *java -jar [name of the client downloaded].jar*
 
 # 4. Pairing a client with a server
 
@@ -107,7 +107,7 @@ It's helpful to know the local network address of the server, in case Moonlight 
 
 2. Type *ipconfig /all* and press Enter/Return
 
-3. A local network addresses usually takes the form of 192.168.x.yyy - this is the information needed in case the address needs to be directly identified to Moonlight.
+3. A local network addresses usually takes the form of **192.168.x.yyy** - this is the information needed in case the address needs to be directly identified to Moonlight.
 
 ### Pair the client and server
 
@@ -117,7 +117,7 @@ It's helpful to know the local network address of the server, in case Moonlight 
 
 	*moonlight -pair [the name or network IP address of the server]*
 
-	If the server is at 192.168.0.100, the command will be: moonlight -pair 192.168.0.100
+	If the server is at 192.168.0.100, the command will be: *moonlight -pair 192.168.0.100*
 
 2. The client will display a PIN using a pop-up message. 
 
@@ -145,21 +145,21 @@ Open the Moonlight app and select the server to stream from. The server will dis
 
 After starting Moonlight and selecting the server from the dropdown list, click on "App List" to see a list of possible games and applications to stream.
 
-Moonlight can also directly start Steam using the command: java -jar moonlight-[name of client].jar -host [name or local network address of the server]
+Moonlight can also directly start Steam using the command: *java -jar moonlight-[name of client].jar -host [name or local network address of the server]*
 
 ### Embedded
 
 Moonlight Embedded will default to launching Steam in Big Picture Mode if not specifically told to launch another game or app. To launch Steam, enter the following command: 
 
-moonlight stream [name or local network address of the server]
+*moonlight stream [name or local network address of the server]*
 
 To launch another application: 
 
-moonlight stream -app [name of application] [name or local network address of the server]
+*moonlight stream -app [name of application] [name or local network address of the server]*
 
 ## Controls
 
-All versions of Moonlight will use any input devices attached to the client to control the application launched from the server. Keyboards, mice, game controllers, whether wired or wirelessly, can be used, assuming they have been set up correctly on the client. This may require the use of other apps, drivers, or button mapping files to ensure that the input devices work correctly. Devices that have been set up for use on the server may also be usable, but they may be given a lower priority or used as controls for a second or higher-numbered player in various games. There is a workaround for this. By renaming *rxinput.dll* in *C:\Program Files\NVIDIA Corporation\NvStreamSrv* (and in *C:\Program Files (x86)\NVIDIA Corporation\NvStreamSrv* on 64-bit Windows), the server will stop accepting control input from the client and only use controllers or peripherals connected to the server. This workaround will have to be re-done every time GeForce Experience updates.
+All versions of Moonlight will use any input devices attached to the client to control the application launched from the server. Keyboards, mice, game controllers, whether wired or wirelessly, can be used, assuming they have been set up correctly on the client. This may require the use of other apps, drivers, or button mapping files to ensure that the input devices work correctly. Devices that have been set up for use on the server may also be usable, but they may be given a lower priority or used as controls for a second or higher-numbered player in various games. There is a workaround for this. By renaming **rxinput.dll** in **C:\Program Files\NVIDIA Corporation\NvStreamSrv** (and in **C:\Program Files (x86)\NVIDIA Corporation\NvStreamSrv** on 64-bit Windows), the server will stop accepting control input from the client and only use controllers or peripherals connected to the server. This workaround will have to be re-done every time GeForce Experience updates.
 
 ### Android/iOS
 
@@ -193,7 +193,7 @@ By default, GeForce Experience and GameStream will only stream over your local n
 
 2. To find the external IP address of your server, when connected to your network, use a service like http://www.whatismyip.com to determine the IP address another computer uses to talk to you.
 
-	* *Note:* Some Internet Service providers change the external IP address in use by any given subscriber on a regular basis. Since Moonlight needs to connect to the right IP address, this change can cause problems for Moonlight. Using a dynamic DNS service like No-IP will give Moonlight a consistent name to use for connecting, even if the IP address that's associated with that name changes a lot. 
+	* **Note:** Some Internet Service providers change the external IP address in use by any given subscriber on a regular basis. Since Moonlight needs to connect to the right IP address, this change can cause problems for Moonlight. Using a dynamic DNS service like No-IP will give Moonlight a consistent name to use for connecting, even if the IP address that's associated with that name changes a lot. 
 
 3. Type the external IP address or name into the IP bar (PC), command line (PC / Embedded) or, on Android or iOS, tap on the plus key when you see all the possible servers to connect to, and a dialog will pop up to enter in an IP address or name, and then connect as normal to your server. Enjoy streaming over the Internet!
 
@@ -201,7 +201,7 @@ By default, GeForce Experience and GameStream will only stream over your local n
 
 Moonlight and GeForce Experience will regularly scan any directories you choose for games that it knows how to handle, but not every game owned will appear in the listing, so sometimes games will have to be added manually. Additionally, other non-game applications can be streamed using GameStream through Moonlight. To add custom games or applications to Moonlight:
 
-1. Start up GeForce Experience on the server and navigate to the "Preferences" tab. Then choose the "SHIELD" option.
+1. Start up GeForce Experience on the server and navigate to the **Preferences** tab. Then choose the **SHIELD** option.
 
 2. Click on the plus sign (+)
 
@@ -217,11 +217,11 @@ Moonlight and GeForce Experience will regularly scan any directories you choose 
 
 In addition to specific applications and games, the Windows desktop of the server can be streamed through Moonlight, making Moonlight an effective and free remote desktop application as well as a game streaming application. To get the Windows Desktop on Moonlight: 
 
-1. Start up GeForce Experience on the server and navigate to the "Preferences" tab. Then choose the "SHIELD" option.
+1. Start up GeForce Experience on the server and navigate to the **Preferences** tab. Then choose the **SHIELD** option.
 
 2. Click on the plus sign (+)
 
-3. Navigate to *C:\Windows\system32* and click on *mstsc.exe* (the .exe may not be visible, depending on your preferences)  and choose "Open".
+3. Navigate to **C:\Windows\system32** and click on **mstsc.exe** (the .exe may not be visible, depending on your preferences)  and choose "Open".
 
 4. Give the new application a name to remember (Windows Desktop), and optionally, choose an icon to represent the program.
 
