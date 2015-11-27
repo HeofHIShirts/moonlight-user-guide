@@ -68,20 +68,20 @@ If the device doesn't have access to the app store, the release packages are ava
 
 1. For embedded computers that are running Raspbian (Raspberry Pi) or Arch Linux ARM (Raspberry Pi and others), pre-built packages or an installation script are available.
 
-	* For Raspbian and OSMC: Add a line to your /etc/apt/sources.list
+	* For Raspbian and OSMC: Add a line to the file **/etc/apt/sources.list**:
 
-	*deb http://archive.itimmer.nl/raspbian/moonlight [wheezy/jessie] main*
+		*deb http://archive.itimmer.nl/raspbian/moonlight [wheezy/jessie] main*
 
-	Then install the package by entering the following two commands:
+		Then install the package by entering the following two commands:
 
-	*sudo apt-get update*
-	*sudo apt-get install moonlight-embedded*
+		*sudo apt-get update*
+		*sudo apt-get install moonlight-embedded*
 
-	Once installed, new versions will be installed during normal system upgrades.
+		Once installed, new versions will be installed during normal system upgrades.
 
-	* For Arch Linux ARM: Use a user repository tool to install moonlight-embedded from the Arch User Repository (AUR). Afterward, new versions will be installed by running
+	* For Arch Linux ARM: Use a user repository tool to install moonlight-embedded from the Arch User Repository (AUR). Afterward, new versions will be installed by running:
 	
-	*sudo pacman -Syu*
+		*sudo pacman -Syu*
 
 2. For other compatible embedded computers, Moonlight will have to be compiled from the source. Follow the directions at https://github.com/irtimmer/moonlight-embedded/wiki/Compilation
 
@@ -89,13 +89,13 @@ If the device doesn't have access to the app store, the release packages are ava
 
 1. Download and install a Java Runtime Environment (JRE) from https://www.java.com/en/download/ (all platforms) or use the appropriate package manager for Linux distributions to install a JRE.
 
-2. PC beta clients are available for download from https://github.com/moonlight-stream/moonlight-pc/releases - get the version that matches the architecture of the JRE (32- or 64-bit) and is for the correct operating system.
+2. PC beta clients are available for download from https://github.com/moonlight-stream/moonlight-pc/releases - get the version that matches the architecture of the JRE downloaded (32- or 64-bit) and is for the correct operating system.
 
 3. Start Moonlight with the command: *java -jar [name of the client downloaded].jar*
 
 # 4. Pairing a client with a server
 
-The first time a client connects to a server, the server needs to make sure the client knows how to communicate and is a device that the server wants to connect to. This process is called *pairing*. One server can pair to many clients and one client can pair to many servers.
+The first time a client connects to a server, the server needs to make sure the client knows how to communicate and is a device that the server wants to connect to. This process is called **pairing**. One server can pair to many clients and one client can pair to many servers.
 
 To successfully pair, both client and server have to be on the same network (wired or wireless), and the server has to be running the GeForce Experience. 
 
@@ -193,7 +193,7 @@ By default, GeForce Experience and GameStream will only stream over your local n
 
 2. To find the external IP address of your server, when connected to your network, use a service like http://www.whatismyip.com to determine the IP address another computer uses to talk to you.
 
-	* **Note:** Some Internet Service providers change the external IP address in use by any given subscriber on a regular basis. Since Moonlight needs to connect to the right IP address, this change can cause problems for Moonlight. Using a dynamic DNS service like No-IP will give Moonlight a consistent name to use for connecting, even if the IP address that's associated with that name changes a lot. 
+	* **Note:** Some Internet Service providers change the external IP address in use by any given subscriber on a regular basis. Since Moonlight needs to connect to the right IP address, this change can cause problems for Moonlight. Using a dynamic DNS service like No-IP (http://www.noip.com) will give Moonlight a consistent name to use for connecting, even if the IP address that's associated with that name changes a lot. 
 
 3. Type the external IP address or name into the IP bar (PC), command line (PC / Embedded) or, on Android or iOS, tap on the plus key when you see all the possible servers to connect to, and a dialog will pop up to enter in an IP address or name, and then connect as normal to your server. Enjoy streaming over the Internet!
 
@@ -211,7 +211,7 @@ Moonlight and GeForce Experience will regularly scan any directories you choose 
 
 5. The next time Moonlight opens and displays the App List (or the -list option is used on Moonlight Embedded), the newly added programs and games should be displayed and ready to stream.
 
-6. If quitting an application doesn't stop Moonlight, press *Ctrl+Shift+Alt+Q* on Moonlight Embedded or Moonlight PC to quit the streaming session. On Moonlight Android and iOS, pressing the home key will switch out of the streaming session and allow selection of the "quit" option from the Application List when returning to Moonlight. 
+6. If quitting an application doesn't stop Moonlight, press *Ctrl+Shift+Alt+Q* on Moonlight Embedded or Moonlight PC to quit the streaming session. On Moonlight Android and iOS, pressing the home key will switch out of the streaming session and allow selection of the **Quit Session** option from the Application List when returning to Moonlight. 
 
 ### Stream the Windows Desktop
 
