@@ -179,17 +179,17 @@ Moonlight for Android and iOS use the touch screen as a way of controlling the m
 By default, GeForce Experience and GameStream will only stream over your local network. To stream over the Internet, specific ports must be opened to allow communication between computers, and Moonlight will have to be explicitly told what IP address to connect to, which will be a different address than one on your network. 
 
 1. On the router controlling the network that the server connects to, in the port forwarding section, open the following ports on the following protocols:
-* TCP:
-	* 35043
-	* 47984
-	* 47989
-	* 47995
-	* 47996
-	* 48010
-* UDP:
-	* 47998
-	* 47999
-	* 48000
+	* TCP:
+		* 35043
+		* 47984
+		* 47989
+		* 47995
+		* 47996
+		* 48010
+	* UDP:
+		* 47998
+		* 47999
+		* 48000
 
 2. To find the external IP address of your server, when connected to your network, use a service like http://www.whatismyip.com to determine the IP address another computer uses to talk to you.
 
